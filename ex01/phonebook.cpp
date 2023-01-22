@@ -27,7 +27,7 @@ void	contact::show_contact(void)
 int	main(void)
 {
 	std::string	command;
-	std::string wanted_index;
+	int			wanted_index;
 	contact		phonebook[8];
 	size_t		i = 0;
 
@@ -42,12 +42,16 @@ int	main(void)
 		if (!command.compare("add"))
 		{
 			i = i % 8;
-			phonebook[i++].add_contact();
+			phonebook[i].add_contact();
+			i++;
 		}
 		if (!command.compare("search"))
 		{
-			std::getline(std::cin, wanted_index);
-			phonebook[0].show_contact();			
+			std::cin >> wanted_index;
+			if (std::cin)
+				phonebook[wanted_index].show_contact();
+			else
+				std::cin.clear();
 		}
 	}
 }

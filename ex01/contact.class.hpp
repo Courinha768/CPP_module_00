@@ -1,4 +1,3 @@
-
 #ifndef CONTACT_CLASS_H
 # define CONTACT_CLASS_H
 
@@ -19,8 +18,6 @@ class contact
 		std::string	favorite_colour;
 
 	public	:
-		// contact();
-		// ~contact();
 		void	add_contact(void);
 		void	show_contact(void);
 
