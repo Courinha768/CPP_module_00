@@ -7,7 +7,7 @@ void	c_phonebook::search(void)
 	size_t	wanted_index;
 
 	if (phonebook[0].has_value())
-		std::cout << std::string(45, '=') << '\n';
+		std::cout << std::string(45, '=') << std::endl;
 	while (++i < 8 && phonebook[i].has_value())
 	{
 		std::cout << '|';
@@ -18,7 +18,7 @@ void	c_phonebook::search(void)
 		phonebook[i].print_value(INFO(LAST_NAME));
 		std::cout << '|';
 		phonebook[i].print_value(INFO(NICKNAME));
-		std::cout << "|\n" << std::string(45, '=') << '\n';
+		std::cout << std::endl << std::string(45, '=') << std::endl;
 	}
 	if (phonebook[0].has_value())
 	{
@@ -29,13 +29,13 @@ void	c_phonebook::search(void)
 			if (wanted_index > 0 && wanted_index < 9 && phonebook[wanted_index - 1].has_value())
 				phonebook[wanted_index - 1].show_contact();
 			else
-				std::cout << "ERROR: index out of bounds!\n";
+				std::cout << "ERROR: index out of bounds!" << std::endl;
 		}
 		else
 			std::cin.clear();
 	}
 	else
-		std::cout << "phonebook is still empty! try adding some contacts\n";
+		std::cout << "phonebook is still empty! try adding some contacts" << std::endl;
 
 }
 
@@ -56,11 +56,11 @@ int	main(void)
 	{
 		std::cout << '>';
 		std::getline(std::cin, command);
-		if (!command.compare("add"))
+		if (!command.compare("ADD"))
 			phonebook.add_contacts();
-		else if (!command.compare("search"))
+		else if (!command.compare("SEARCH"))
 			phonebook.search();
-		else if (!command.compare("exit"))
+		else if (!command.compare("EXIT"))
 			break ;
 	}
 }

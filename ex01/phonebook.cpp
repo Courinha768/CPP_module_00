@@ -19,11 +19,11 @@ contact::~contact(void)
 
 void	contact::show_contact(void)
 {
-	std::cout	<<	"index      : "	<<	index		<<	"\n";
-	std::cout	<<	"phone      : "	<<	phone		<<	"\n";
-	std::cout	<<	"name       : "	<<	name		<<	"\n";
-	std::cout	<<	"last_name  : "	<<	last_name	<<	"\n";
-	std::cout	<<	"nickname   : "	<<	nickname	<<	"\n";
+	std::cout	<<	"index      : "	<<	index		<<	std::endl;
+	std::cout	<<	"phone      : "	<<	phone		<<	std::endl;
+	std::cout	<<	"name       : "	<<	name		<<	std::endl;
+	std::cout	<<	"last_name  : "	<<	last_name	<<	std::endl;
+	std::cout	<<	"nickname   : "	<<	nickname	<<	std::endl;
 }
 
 static void	print_index_s10(size_t index)
