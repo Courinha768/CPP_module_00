@@ -43,7 +43,8 @@ void	c_phonebook::add_contacts(void)
 {
 	static size_t	i;
 
-	phonebook[i++ % 8].add_contact();
+	phonebook[i % 8].add_contact(i);
+	i++;
 }
 
 int	main(void)
@@ -60,6 +61,6 @@ int	main(void)
 		else if (!command.compare("search"))
 			phonebook.search();
 		else if (!command.compare("exit"))
-			exit(0);
+			break ;
 	}
 }

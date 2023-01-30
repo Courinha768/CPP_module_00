@@ -14,12 +14,10 @@
 
 enum	INFO {INDEX, NAME, NICKNAME, LAST_NAME};
 
-void	print_str_s10(std::string str);
-
 class contact
 {
 	private	:
-		std::string	index;
+		size_t		index;
 		std::string	phone;
 		std::string	name;
 		std::string	nickname;
@@ -28,7 +26,7 @@ class contact
 	public	:
 		contact(void);
 		~contact(void);
-		void	add_contact(void);
+		void	add_contact(size_t i);
 		void	show_contact(void);
 		bool	has_value(void);
 		void	print_value(int msg);

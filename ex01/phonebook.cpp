@@ -26,7 +26,12 @@ void	contact::show_contact(void)
 	std::cout	<<	"nickname   : "	<<	nickname	<<	"\n";
 }
 
-void	print_str_s10(std::string str)
+static void	print_index_s10(size_t index)
+{
+   std::cout << std::setw(10) << index;
+}
+
+static void	print_str_s10(std::string str)
 {
 	if (str.length() <= 10)
         std::cout << std::setw(10) << str;
@@ -40,7 +45,7 @@ void	print_str_s10(std::string str)
 void	contact::print_value(int info)
 {
 	if (info == INFO(INDEX))
-		print_str_s10(index);
+		print_index_s10(index);
 	else if (info == INFO(NAME))
 		print_str_s10(name);
 	else if (info == INFO(LAST_NAME))
@@ -56,16 +61,14 @@ bool	contact::has_value(void)
 	return (true);
 }
 
-void	contact::add_contact(void)
+void	contact::add_contact(size_t i)
 {
-	static size_t	i;
-
 	phone = NULL_STR;
 	name = NULL_STR;
 	last_name = NULL_STR;
 	nickname = NULL_STR;
 
-	index = std::to_string(i++ % 8 + 1);
+	index = i % 8 + 1;
 	while (phone.empty())
 	{
 		std::cout << "number    : ";
