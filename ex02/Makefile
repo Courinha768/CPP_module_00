@@ -6,16 +6,20 @@ OBJS			= $(SRCS:.cpp=.o)
 CXX				= c++
 CXXFLAGS		= -Wall -Wextra -Werror -I. -std=c++98
 
+REMOVE			= rm
+
 all:			$(NAME)
 
 $(NAME):		$(OBJS)
-				$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
+				@$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
 clean:
-				@rm $(OBJS)
+				@rm -rf $(OBJS)
+				@echo "\e[1mObject files deleted\033[0m"
 
 fclean:			clean
-				@rm $(NAME)
+				@rm -rf $(NAME)
+				@echo "\e[1mExecutable files deleted\033[0m"
 
 re:				fclean $(NAME)
 
