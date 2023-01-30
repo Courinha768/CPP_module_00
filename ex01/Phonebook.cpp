@@ -1,23 +1,23 @@
-#include "contact.class.hpp"
-#include "phonebook.class.hpp"
+#include "Contact.hpp"
+#include "Phonebook.hpp"
 
-c_phonebook::c_phonebook(void)
+Phonebook::Phonebook(void)
 {
 }
 
-c_phonebook::~c_phonebook(void)
+Phonebook::~Phonebook(void)
 {
 }
 
-contact::contact(void)
+Contact::Contact(void)
 {
 }
 
-contact::~contact(void)
+Contact::~Contact(void)
 {
 }
 
-void	contact::show_contact(void)
+void	Contact::show_contact(void)
 {
 	std::cout	<<	"index      : "	<<	index		<<	std::endl;
 	std::cout	<<	"phone      : "	<<	phone		<<	std::endl;
@@ -42,7 +42,7 @@ static void	print_str_s10(std::string str)
     }
 }
 
-void	contact::print_value(int info)
+void	Contact::print_value(int info)
 {
 	if (info == INFO(INDEX))
 		print_index_s10(index);
@@ -54,14 +54,14 @@ void	contact::print_value(int info)
 		print_str_s10(nickname);
 }
 
-bool	contact::has_value(void)
+bool	Contact::has_value(void)
 {
 	if (phone.empty())
 		return (false);
 	return (true);
 }
 
-void	contact::add_contact(size_t i)
+void	Contact::add_contact(size_t i)
 {
 	phone = NULL_STR;
 	name = NULL_STR;

@@ -1,6 +1,6 @@
 NAME			= phonebook
 
-SRCS			= phonebook.cpp main.cpp
+SRCS			= Phonebook.cpp main.cpp
 OBJS			= $(SRCS:.cpp=.o)
 
 CXX				= c++
@@ -12,10 +12,12 @@ $(NAME):		$(OBJS)
 				$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
 clean:
-				@rm $(OBJS)
+				@rm -rf $(OBJS)
+				@echo "\e[1mObject files deleted\033[0m"
 
 fclean:			clean
-				@rm $(NAME)
+				@rm -rf $(NAME)
+				@echo "\e[1mExecutable files deleted\033[0m"
 
 re:				fclean $(NAME)
 

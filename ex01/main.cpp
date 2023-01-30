@@ -1,7 +1,7 @@
-#include "contact.class.hpp"
-#include "phonebook.class.hpp"
+#include "Contact.hpp"
+#include "Phonebook.hpp"
 
-void	c_phonebook::search(void)
+void	Phonebook::search(void)
 {
 	size_t	i = -1;
 	size_t	wanted_index;
@@ -39,7 +39,7 @@ void	c_phonebook::search(void)
 
 }
 
-void	c_phonebook::add_contacts(void)
+void	Phonebook::add_contacts(void)
 {
 	static size_t	i;
 
@@ -50,7 +50,7 @@ void	c_phonebook::add_contacts(void)
 int	main(void)
 {
 	std::string	command;
-	c_phonebook	phonebook;
+	Phonebook	phonebook;
 
 	while (1)
 	{

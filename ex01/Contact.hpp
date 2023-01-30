@@ -14,7 +14,7 @@
 
 enum	INFO {INDEX, NAME, NICKNAME, LAST_NAME};
 
-class contact
+class Contact
 {
 	private	:
 		size_t		index;
@@ -24,8 +24,8 @@ class contact
 		std::string last_name;
 
 	public	:
-		contact(void);
-		~contact(void);
+		Contact(void);
+		~Contact(void);
 		void	add_contact(size_t i);
 		void	show_contact(void);
 		bool	has_value(void);
