@@ -1,4 +1,4 @@
-NAME			= phonebook
+NAME			= logs
 
 SRCS			= Account.cpp tests.cpp
 OBJS			= $(SRCS:.cpp=.o)
