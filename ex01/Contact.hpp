@@ -12,7 +12,7 @@
 
 # define NULL_STR ""
 
-enum	INFO {INDEX, NAME, NICKNAME, LAST_NAME};
+enum	INFO {INDEX, NAME, NICKNAME, LAST_NAME, SECRET};
 
 class Contact
 {
@@ -20,8 +20,9 @@ class Contact
 		size_t		index;
 		std::string	phone;
 		std::string	name;
-		std::string	nickname;
 		std::string last_name;
+		std::string	nickname;
+		std::string	darkest_secret;
 
 	public	:
 		Contact(void);
